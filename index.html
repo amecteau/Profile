@@ -50,7 +50,7 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Load and render markdown content
+        // Load pre-rendered profile HTML content
         fetch('profile.html')
             .then(response => response.text())
             .then(html => {

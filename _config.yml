@@ -1,0 +1,25 @@
+# GitHub Pages Configuration
+title: Professional Profile
+description: A professional profile and resume page
+author: Your Name
+email: your.email@example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# GitHub Pages settings
+url: "https://amecteau.github.io"
+baseurl: "/Profile"
+
+# Exclude files from build
+exclude:
+  - README.md
+  - .gitignore
+  - .github/
+
+# Include files
+include:
+  - index.html
+  - profile.md
+  - style.css

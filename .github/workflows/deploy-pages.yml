@@ -4,7 +4,7 @@ name: Deploy Profile to GitHub Pages
 on:
   push:
     branches:
-      - copilot/create-professional-profile-page  # Development branch
+      - AddContent  # Development branch
       - main
       - master
   workflow_dispatch:  # Allow manual trigger

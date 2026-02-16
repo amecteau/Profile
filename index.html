@@ -54,8 +54,12 @@
         fetch('profile.html')
             .then(response => response.text())
             .then(html => {
-                // Jekyll already processed the markdown to HTML
-                document.getElementById('markdown-content').innerHTML = html;
+                // Jekyll already processed the markdown to HTML.
+                // Ensure we only inject the inner content, not an entire HTML document.
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(html, 'text/html');
+                var content = (doc.body && doc.body.innerHTML.trim()) ? doc.body.innerHTML : html;
+                document.getElementById('markdown-content').innerHTML = content;
 
                 // Smooth scroll for anchor links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

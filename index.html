@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Professional Profile</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -25,7 +27,7 @@
             <section id="home" class="hero">
                 <div class="hero-content">
                     <h1>Welcome to My Professional Profile</h1>
-                    <p class="subtitle">Your Professional Title | Industry Expert</p>
+                    <p class="subtitle">Associate VP of Software Engineering | Industry Expert</p>
                     <a href="#contact" class="cta-button">Get In Touch</a>
                 </div>
             </section>
@@ -43,21 +45,21 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Load and render markdown content
-        fetch('profile.md')
+        // Load pre-rendered profile HTML content
+        fetch('profile.html')
             .then(response => response.text())
-            .then(text => {
-                // Remove front matter if present
-                const content = text.replace(/^---[\s\S]*?---\n/, '');
-                
-                // Parse and render markdown
-                document.getElementById('markdown-content').innerHTML = marked.parse(content);
-                
+            .then(html => {
+                // Jekyll already processed the markdown to HTML.
+                // Ensure we only inject the inner content, not an entire HTML document.
+                var parser = new DOMParser();
+                var doc = parser.parseFromString(html, 'text/html');
+                var content = (doc.body && doc.body.innerHTML.trim()) ? doc.body.innerHTML : html;
+                document.getElementById('markdown-content').innerHTML = content;
+
                 // Smooth scroll for anchor links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     anchor.addEventListener('click', function (e) {
@@ -73,9 +75,10 @@
             })
             .catch(error => {
                 console.error('Error loading profile:', error);
-                document.getElementById('markdown-content').innerHTML = 
-                    '<p>Error loading profile content. Please check if profile.md exists.</p>';
+                document.getElementById('markdown-content').innerHTML =
+                    '<p>Error loading profile content. Please check if profile.html exists.</p>';
             });
     </script>
 </body>
+
 </html>

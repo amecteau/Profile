@@ -70,7 +70,7 @@ Transformational engineering leader with 24+ years driving technical excellence 
 ---
 ### The Marlin Company(AppSpace) - Wallingford, Connecticut
 
-#### Systems Architect
+#### Systems Architect (Sept 2017 – Feb 2020)
 
 **Technical Leadership & Transformation**
 

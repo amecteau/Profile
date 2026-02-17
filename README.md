@@ -37,7 +37,6 @@ Edit `profile.md` with your information:
 - Education
 - Skills
 - Projects
-- Certifications
 - Contact information
 
 #### Customize Styling

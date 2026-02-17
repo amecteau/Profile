@@ -173,20 +173,6 @@ Designed planogram retrieval solution eliminating burdensome printing process, s
 
 ---
 
-## CERTIFICATIONS & EDUCATION
-
-**Cornell University** – Certificate in Engineering Leadership (2019)
-
-**Microsoft Certifications:**
-- MCPD: ASP.NET Developer 3.5, Windows Developer, Web Developer
-- MCTS: .NET Framework 3.5 (ASP.NET Applications), .NET Framework 2.0 (Web & Windows Applications)
-- MCTS: SharePoint Services 3.0 & Server 2007 (Configuration)
-- MCSD: Microsoft Certified Solution Developer .NET
-- MCAD: Microsoft Certified Application Developer
-- MCP: Microsoft Certified Professional
-
----
-
 ## PROFESSIONAL IMPACT SUMMARY
 
 - **24+ years** software engineering experience with progressive technical leadership responsibility

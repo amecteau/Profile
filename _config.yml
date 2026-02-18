@@ -6,7 +6,6 @@ email: your.email@example.com
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 # GitHub Pages settings
 url: "https://amecteau.github.io"
